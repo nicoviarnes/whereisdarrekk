@@ -1,23 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
 
 function App() {
+  const today = new Date();
+  const dDay = new Date("March 30, 2019 12:00:00");
+  const res = Math.abs(today - dDay) / 1000;
+  const days = Math.floor(res / 86400);
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <h1>Have You Seen This Man?</h1>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          It's been <span id="days">{days}</span> days since we've played video
+          games with our friend Darrekk :(
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <img src="/darrekk.jpg" width="50%" alt="darrekk" />
+        <br/><br/>
       </header>
     </div>
   );
