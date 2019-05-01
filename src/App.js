@@ -3,7 +3,7 @@ import "./App.css";
 
 function App() {
   const today = new Date();
-  const dDay = new Date("March 30, 2019 12:00:00");
+  const dDay = new Date("April 30, 2019 12:00:00");
   const res = Math.abs(today - dDay) / 1000;
   const days = Math.floor(res / 86400);
 
